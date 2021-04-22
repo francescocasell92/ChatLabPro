@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(ChatLabPro)
 
 set(CMAKE_CXX_STANDARD 17)
-set( SOURCE User.h User.cpp Message.h Observer.h Subject.h)
+set( SOURCE User.h User.cpp Message.h Observer.h Subject.h Chat.h cmake-build-debug/MessageNotify.h)
 
 
 add_executable(ChatLabPro main.cpp)
