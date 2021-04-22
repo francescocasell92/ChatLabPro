@@ -1,0 +1,4 @@
+/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles/core.dir
+/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles/ChatLabPro.dir
