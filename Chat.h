@@ -48,21 +48,21 @@ public:
                 this->notify();
         }
         else
-            throw std::invalid_argument("messaggio non valido");
+            throw std::invalid_argument("La Chat tra questi utenti non esiste.");
     }
     void readMessage(int i){
         if(i < messages.size() && i >= 0){
             if (messages[i].getMsgFrom()==firstUser.getName()||
             messages[i].getMsgTo()== secondUser.getName()){
-                std::cout <<"\t"+firstUser.getName()+" : "+messages[i].getText()<< std::endl;
+                std::cout <<firstUser.getName()+" : "+messages[i].getText()<< std::endl;
 
                 messages[i].setRead(true);
                 this->notify();
             }else
-                {std::cout <<"\t"+secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
+                {std::cout <<secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
         }
         else
-            throw std::out_of_range("out of range");
+             std::cerr << "Messaggio fuori da una Chat." << std::endl;
     }
 
     int getUnreadMessages()const {

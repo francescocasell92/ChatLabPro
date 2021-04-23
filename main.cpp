@@ -9,13 +9,16 @@ using namespace std;
 int main() {
 
     //--USER--//
-    User tom("tom","1234","firenze");
-    User jerry("jerry","5678","roma");
+    User tom("Tom","1234","Firenze");
+    User jerry("Jerry","5678","Roma");
+    User bugs("Bugs","9123","Milano");
+    User duffy("Duffy","4567","Torino");
 
 
     //--MESSAGES--//
-    Message a("tom","jerry","ciao jerry oggi ti catturerò..");
-    Message b("jerry","tom","ciao tom, non sarà oggi.");
+    Message a("Tom","Jerry","Ciao Jerry oggi ti catturerò..");
+    Message b("Jerry","Tom","Ciao Tom, non sarà oggi.");
+    Message c("Bugs","Duffy","Che succede amico??");
 
     //--CHAT--//
     Chat foo(tom,jerry);
@@ -32,6 +35,16 @@ int main() {
     foo.newMessage(b);
     foo.readMessage(0);
     foo.readMessage(1);
+
+    //--ERROR--//
+    try {
+        foo.newMessage(c);
+    }
+    catch (invalid_argument &e){
+        cerr << "Error: " << e.what() << endl;
+    }
+        foo.readMessage(2);
+
 
 
 
