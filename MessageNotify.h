@@ -13,7 +13,7 @@ class MessageNotify: public Observer{
 
 public:
 
-      //--METHODS--//
+      //--METHODS---//
       MessageNotify(std::shared_ptr<Chat> sub, bool act): subject(sub), active(act){}
 
       virtual ~MessageNotify(){}

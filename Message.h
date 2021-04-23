@@ -12,7 +12,7 @@ using namespace std;
 class Message{
 
 public:
-    //--METHODS--//
+    //--METHODS---//
     Message(std::string msgFrom , std::string msgTo , std::string text, bool read = false ):
     msgFrom(msgFrom),msgTo(msgTo) , text(text) , read(read) {}
 

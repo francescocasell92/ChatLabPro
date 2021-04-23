@@ -14,7 +14,7 @@ class User{
 
 public:
 
-     //--METHODS--//
+     //--METHODS---//
      User(std::string name , std::string number , std::string city):
      name(name), number(number), city(city) {}
      std::string getName() const{
