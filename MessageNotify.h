@@ -13,10 +13,9 @@ class MessageNotify: public Observer{
 
 public:
 
-      //--costruttore--------//
+      //--METHODS--//
       MessageNotify(std::shared_ptr<Chat> sub, bool act): subject(sub), active(act){}
 
-      //--metodi-------------//
       virtual ~MessageNotify(){}
 
       virtual void attach() override{
@@ -43,7 +42,7 @@ public:
       std::shared_ptr<Chat> getSubject(){return subject;}
 private:
 
-      //--attributi--------//
+      //--ATTRIBUTES--//
       std::shared_ptr<Chat> subject;
       bool active;
 };

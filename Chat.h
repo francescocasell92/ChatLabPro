@@ -20,12 +20,11 @@ class Chat {
 
 public:
 
-    //--costruttore-----//
+    //--METHODS--//
     Chat(User &ux , User &uy ): firstUser(ux) , secondUser(uy){}
 
     ~Chat() {};
 
-    //--metodi---------//
 
     const User &getFirstUser() const{return firstUser;}
 
@@ -55,12 +54,12 @@ public:
         if(i < messages.size() && i >= 0){
             if (messages[i].getMsgFrom()==firstUser.getName()||
             messages[i].getMsgTo()== secondUser.getName()){
-                std::cout << firstUser.getName()+" : "+messages[i].getText()<< std::endl;
+                std::cout <<"\t"+firstUser.getName()+" : "+messages[i].getText()<< std::endl;
 
                 messages[i].setRead(true);
                 this->notify();
             }else
-                {std::cout << secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
+                {std::cout <<"\t"+secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
         }
         else
             throw std::out_of_range("out of range");
@@ -76,7 +75,7 @@ public:
     }
 private:
 
-    //--attributi-------//
+    //--ATTRIBUTES--//
     User   firstUser , secondUser ;
     std::list<std::shared_ptr<Observer>>observers;
     std::vector<Message> messages;

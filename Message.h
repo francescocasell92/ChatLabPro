@@ -12,11 +12,10 @@ using namespace std;
 class Message{
 
 public:
-    //--costruttore--//
+    //--METHODS--//
     Message(std::string msgFrom , std::string msgTo , std::string text, bool read = false ):
     msgFrom(msgFrom),msgTo(msgTo) , text(text) , read(read) {}
 
-    //--metodi-------//
     const std::string &getMsgFrom() const{return msgFrom;}
 
     const std::string &getMsgTo() const{return msgTo;}
@@ -28,7 +27,7 @@ public:
     bool setRead(bool read){Message::read=read;}
 
 private:
-    //--attributi----//
+    //--ATTRIBUTES--//
 std::string msgFrom , msgTo , text;
 bool read;
 

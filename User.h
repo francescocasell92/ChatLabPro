@@ -14,11 +14,9 @@ class User{
 
 public:
 
-     //--costruttore----//
+     //--METHODS--//
      User(std::string name , std::string number , std::string city):
      name(name), number(number), city(city) {}
-
-     //--metodi---------//
      std::string getName() const{
          return name;
      }
@@ -33,7 +31,7 @@ public:
 
 private:
 
-    //--attributi-------//
+    //--ATTRIBUTES--//
     std::string name , number , city ;
 
 
