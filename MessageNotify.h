@@ -19,13 +19,32 @@ public:
       //--metodi-------------//
       virtual ~MessageNotify(){}
 
+      virtual void attach() override{
+          std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
+          subject->subscribe(mhs);
+      }
 
+      virtual void detach() override {
+          std::shared_ptr<MessageNotify> mhs= std::make_shared<MessageNotify>(*this);
+          subject->unsubscribe(mhs);
+      }
+
+      virtual void update() override{
+          if(active)
+              this->draw(subject->getUnreadMessages());
+      }
+
+      void turnOn(){active = true;}
+
+      void turnOff(){active = false;}
+
+      void draw(int i){std::cout<< i + " messaggi non letti. "<< std::endl;}
+
+      std::shared_ptr<Chat> getSubject(){return subject;}
 private:
 
       //--attributi--------//
-
       std::shared_ptr<Chat> subject;
-
       bool active;
 };
 

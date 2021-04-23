@@ -6,6 +6,44 @@
 
 #IncludeRegexTransform: 
 
+/Users/francescocaselli1992/Documents/ChatLabPro/Chat.h
+User.h
+/Users/francescocaselli1992/Documents/ChatLabPro/User.h
+Message.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Message.h
+Subject.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Subject.h
+list
+/Users/francescocaselli1992/Documents/ChatLabPro/list
+memory
+/Users/francescocaselli1992/Documents/ChatLabPro/memory
+vector
+/Users/francescocaselli1992/Documents/ChatLabPro/vector
+iostream
+/Users/francescocaselli1992/Documents/ChatLabPro/iostream
+
+/Users/francescocaselli1992/Documents/ChatLabPro/Message.h
+string
+/Users/francescocaselli1992/Documents/ChatLabPro/string
+
+/Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
+Observer.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Observer.h
+Chat.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Chat.h
+memory
+/Users/francescocaselli1992/Documents/ChatLabPro/memory
+
+/Users/francescocaselli1992/Documents/ChatLabPro/Observer.h
+memory
+/Users/francescocaselli1992/Documents/ChatLabPro/memory
+
+/Users/francescocaselli1992/Documents/ChatLabPro/Subject.h
+memory
+/Users/francescocaselli1992/Documents/ChatLabPro/memory
+Observer.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Observer.h
+
 /Users/francescocaselli1992/Documents/ChatLabPro/User.h
 string
 /Users/francescocaselli1992/Documents/ChatLabPro/string
@@ -15,4 +53,10 @@ iostream
 -
 User.h
 /Users/francescocaselli1992/Documents/ChatLabPro/User.h
+iostream
+/Users/francescocaselli1992/Documents/ChatLabPro/iostream
+MessageNotify.h
+/Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
+Chat.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Chat.h
 

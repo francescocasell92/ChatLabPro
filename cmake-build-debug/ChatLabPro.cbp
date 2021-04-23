@@ -124,6 +124,9 @@
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/Message.h">
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h">
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/Observer.h">
 			<Option target="core"/>
 		</Unit>
@@ -134,9 +137,6 @@
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/User.h">
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/MessageNotify.h">
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/main.cpp">

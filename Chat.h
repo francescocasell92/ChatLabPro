@@ -31,34 +31,54 @@ public:
 
     void setFirstUser(const User &firstUser){ Chat::firstUser = firstUser;}
 
-    const &getSecondUser() const {return secondUser;}
+    const User &getSecondUser() const {return secondUser;}
 
     void setSecondUser (const User &secondUser) { Chat::secondUser = secondUser;}
+
+    virtual void subscribe(std::shared_ptr<Observer> observer){ observers.push_back(observer);}
+
+    virtual void unsubscribe(std::shared_ptr<Observer> observer){ observers.remove(observer);}
+
+    virtual void notify(){for(auto observer:observers)observer->update();}
 
     void newMessage(const Message & newMsg){
         if(firstUser.getName()==newMsg.getMsgFrom() || firstUser.getName()==newMsg.getMsgTo()||
         secondUser.getName()==newMsg.getMsgFrom()||secondUser.getName()==newMsg.getMsgTo()){
-            messages.push_back(newMsg)
+            messages.push_back(newMsg);
             if(firstUser.getName()==newMsg.getMsgFrom())
                 this->notify();
         }
         else
             throw std::invalid_argument("messaggio non valido");
     }
+    void readMessage(int i){
+        if(i < messages.size() && i >= 0){
+            if (messages[i].getMsgFrom()==firstUser.getName()||
+            messages[i].getMsgTo()== secondUser.getName()){
+                std::cout << firstUser.getName()+" : "+messages[i].getText()<< std::endl;
 
+                messages[i].setRead(true);
+                this->notify();
+            }else
+                {std::cout << secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
+        }
+        else
+            throw std::out_of_range("out of range");
+    }
 
-
-
-
-
-
-
-
+    int getUnreadMessages()const {
+        int i=0;
+        for(const auto &message:messages)
+            if(message.getMsgTo()==firstUser.getName())
+                if (!message.isRead())
+                    i++;
+                return i;
+    }
 private:
 
     //--attributi-------//
     User   firstUser , secondUser ;
-    std::list<std::shared_ptr<Observe>observers;
+    std::list<std::shared_ptr<Observer>>observers;
     std::vector<Message> messages;
 
 
