@@ -51,10 +51,14 @@ string
 /Users/francescocaselli1992/Documents/ChatLabPro/main.cpp
 iostream
 -
+memory
+-
+vector
+-
 User.h
 /Users/francescocaselli1992/Documents/ChatLabPro/User.h
 iostream
-/Users/francescocaselli1992/Documents/ChatLabPro/iostream
+-
 MessageNotify.h
 /Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
 Chat.h
