@@ -7,16 +7,11 @@
 #include "../User.h"
 #include "../Message.h"
 
+User tom("tom","1234","Firenze");
+User jerry("jerry","5678","Roma");
 
-User Luca("Luca","1234","Milano");
-User Paolo("Paolo","5678","Roma");
-
-
-TEST( Chat , TestChat){
-    Chat foo(Luca,Paolo);
-    ASSERT_EQ(foo.getFirstUser(),"luca");
-    ASSERT_EQ(foo.setSecondUser(),"paolo");
-    Message a = (Message("luca","paolo","ciao."));
-    ASSERT_EQ(foo.getUnreadMessages(),"ciao");
+TEST(Chat, TestChatGetters){
+    Chat tj(tom,jerry);
+    ASSERT_EQ(tj.getFirstUser().getName(), "tom");
+    ASSERT_EQ(tj.getSecondUser().getName(),"jerry");
 }
-

@@ -488,7 +488,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -531,6 +531,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8][cfound components: Interpreter ][v3.8.2()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.16()]
 //Details about finding Threads
@@ -541,6 +543,12 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/bin/python3.8
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;2;64;;cpython-38-darwin;/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8;/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8;/Library/Python/3.8/site-packages;/Library/Python/3.8/site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=1fbbed468e309e87a90d2c3c7d11ff69
+cmake_package_name:INTERNAL=GTest
 generated_dir:INTERNAL=/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/lib/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
