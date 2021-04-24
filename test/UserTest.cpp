@@ -1,6 +1,5 @@
 //
-// Created by francesco caselli on 24/04/21.
-//
+// Created by francesco caselli
 
 
 #include <gtest/gtest.h>

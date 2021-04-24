@@ -42,6 +42,7 @@ int main() {
     foo.readMessage(1);
 
     //--ERROR--//
+
     try {
         foo.newMessage(c);
     }
