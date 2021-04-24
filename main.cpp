@@ -4,8 +4,10 @@
 
 
 #include <iostream>
+#include <memory>
+#include <vector>
 #include "User.h"
-#include "iostream"
+#include <iostream>
 #include "MessageNotify.h"
 #include "Chat.h"
 

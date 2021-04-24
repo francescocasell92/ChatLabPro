@@ -12,7 +12,7 @@
 /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/list_install_components.dir
 /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
 /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/edit_cache.dir
-/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/RunAllTest.cpp.dir
+/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/runAllTests.dir
 /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/lib/googletest/CMakeFiles/install/local.dir
 /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/lib/googletest/CMakeFiles/install/strip.dir
 /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/lib/googletest/CMakeFiles/install.dir

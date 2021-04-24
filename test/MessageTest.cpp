@@ -5,7 +5,8 @@
 #include <gtest/gtest.h>
 #include "../Message.h"
 
-TEST ( Message , TestMessage){
+
+TEST( Message , TestMessage){
 
     Message mx= Message("Luca","Paolo","welcome.");
     ASSERT_EQ(mx.getMsgFrom(),"Luca");

@@ -18,7 +18,5 @@ TEST( Chat , TestChat){
     ASSERT_EQ(foo.setSecondUser(),"paolo");
     Message a = (Message("luca","paolo","ciao."));
     ASSERT_EQ(foo.getUnreadMessages(),"ciao");
-
-
 }
 

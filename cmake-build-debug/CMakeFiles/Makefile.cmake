@@ -80,7 +80,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/core.dir/DependInfo.cmake"
   "CMakeFiles/ChatLabPro.dir/DependInfo.cmake"
-  "test/CMakeFiles/RunAllTest.cpp.dir/DependInfo.cmake"
+  "test/CMakeFiles/runAllTests.dir/DependInfo.cmake"
   "test/lib/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "test/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "test/lib/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"

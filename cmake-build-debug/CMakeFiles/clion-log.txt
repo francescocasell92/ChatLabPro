@@ -1,4 +1,9 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/francescocaselli1992/Documents/ChatLabPro
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug
+CMake Error at test/CMakeLists.txt:1 (add_subdirectory):
+  add_subdirectory given source "./lib/googletest" which is not an existing
+  directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles/CMakeError.log".

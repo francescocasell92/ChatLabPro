@@ -157,8 +157,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="RunAllTest.cpp">
-				<Option output="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/RunAllTest.cpp" prefix_auto="0" extension_auto="0"/>
+			<Target title="runAllTests">
+				<Option output="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/runAllTests" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -173,14 +173,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 RunAllTest.cpp"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runAllTests"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="RunAllTest.cpp/fast">
-				<Option output="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/RunAllTest.cpp" prefix_auto="0" extension_auto="0"/>
+			<Target title="runAllTests/fast">
+				<Option output="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/runAllTests" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -195,7 +195,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 RunAllTest.cpp/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runAllTests/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
@@ -410,8 +410,14 @@
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/main.cpp">
 			<Option target="ChatLabPro"/>
 		</Unit>
+		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/test/ChatTest.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/test/MessageTest.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/test/UserTest.cpp">
-			<Option target="RunAllTest.cpp"/>
+			<Option target="runAllTests"/>
 		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/test/lib/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
@@ -424,6 +430,9 @@
 		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/test/lib/googletest/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/test/runAllTests.cpp">
+			<Option target="runAllTests"/>
 		</Unit>
 		<Unit filename="/Users/francescocaselli1992/Documents/ChatLabPro/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

@@ -203,17 +203,17 @@ ChatLabPro/fast:
 .PHONY : ChatLabPro/fast
 
 #=============================================================================
-# Target rules for targets named RunAllTest.cpp
+# Target rules for targets named runAllTests
 
 # Build rule for target.
-RunAllTest.cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RunAllTest.cpp
-.PHONY : RunAllTest.cpp
+runAllTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runAllTests
+.PHONY : runAllTests
 
 # fast build rule for target.
-RunAllTest.cpp/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/RunAllTest.cpp.dir/build.make test/CMakeFiles/RunAllTest.cpp.dir/build
-.PHONY : RunAllTest.cpp/fast
+runAllTests/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/build
+.PHONY : runAllTests/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -334,12 +334,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ChatLabPro"
-	@echo "... RunAllTest.cpp"
 	@echo "... core"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... runAllTests"
 	@echo "... User.o"
 	@echo "... User.i"
 	@echo "... User.s"
