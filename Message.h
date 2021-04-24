@@ -1,5 +1,5 @@
 //
-// Created by francesco caselli on 22/04/21.
+// Created by francesco caselli
 //
 
 #ifndef CHATLABPRO_MESSAGE_H

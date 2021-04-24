@@ -1,6 +1,3 @@
-//
-// Created by francesco caselli on 22/04/21.
-//
 
 #ifndef CHATLABPRO_USER_H
 #define CHATLABPRO_USER_H
