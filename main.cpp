@@ -5,9 +5,7 @@
 
 #include <iostream>
 #include <memory>
-#include <vector>
 #include "User.h"
-#include <iostream>
 #include "MessageNotify.h"
 #include "Chat.h"
 
@@ -23,9 +21,10 @@ int main() {
 
 
     //--MESSAGES--//
-    Message a("Tom","Jerry","Ciao Jerry oggi ti catturerò..");
-    Message b("Jerry","Tom","Ciao Tom, non sarà oggi.");
-    Message c("Bugs","Duffy","Che succede amico??");
+    Message a("Tom","Jerry","Ciao Jerry come è andata ieri?");
+    Message b("Jerry","Tom","Ciao Tom, è andato tutto bene te?.");
+    Message c("Tom","Jerry","Tutto bene anche io.");
+    Message d("Bugs","Duffy","Che succede amico??");
 
     //--CHAT--//
     Chat foo(tom,jerry);
@@ -40,18 +39,20 @@ int main() {
     //--EXE--//
     foo.newMessage(a);
     foo.newMessage(b);
+    foo.newMessage(c);
     foo.readMessage(0);
     foo.readMessage(1);
+    foo.readMessage(2);
 
     //--ERROR--//
 
     try {
-        foo.newMessage(c);
+        foo.newMessage(d);
     }
     catch (invalid_argument &e){
         cerr << "Error: " << e.what() << endl;
     }
-        foo.readMessage(2);
+        foo.readMessage(3);
 
 
 

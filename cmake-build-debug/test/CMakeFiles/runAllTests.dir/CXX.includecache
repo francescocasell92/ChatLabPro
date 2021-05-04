@@ -344,3 +344,9 @@ gtest/gtest.h
 ../Message.h
 /Users/francescocaselli1992/Documents/ChatLabPro/Message.h
 
+/Users/francescocaselli1992/Documents/ChatLabPro/test/UserTest.cpp
+gtest/gtest.h
+-
+../User.h
+/Users/francescocaselli1992/Documents/ChatLabPro/User.h
+

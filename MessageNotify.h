@@ -40,6 +40,8 @@ public:
       void draw(int i){std::cout<< i + " messaggi non letti. "<< std::endl;}
 
       std::shared_ptr<Chat> getSubject(){return subject;}
+
+
 private:
 
       //--ATTRIBUTES--//
