@@ -16,7 +16,7 @@ public:
       //--METHODS---//
       MessageNotify(std::shared_ptr<Chat> sub, bool act): subject(sub), active(act){}
 
-      virtual ~MessageNotify(){}
+      virtual ~MessageNotify() = default;
 
       virtual void attach() override{
           std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
@@ -33,13 +33,17 @@ public:
               this->draw(subject->getUnreadMessages());
       }
 
-      void turnOn(){active = true;}
+      void turnOn(){
+          active = true;}
 
-      void turnOff(){active = false;}
+      void turnOff(){
+          active = false;}
 
-      void draw(int i){std::cout<< i + " messaggi non letti. "<< std::endl;}
+      void draw(int i){
+          std::cout<< i + " messaggi non letti. "<< std::endl;}
 
-      std::shared_ptr<Chat> getSubject(){return subject;}
+      std::shared_ptr<Chat> getSubject(){
+          return subject;}
 
 
 private:

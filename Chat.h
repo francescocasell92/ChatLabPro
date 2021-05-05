@@ -24,22 +24,29 @@ public:
     //--METHODS--//
     Chat(User &ux , User &uy ): firstUser(ux) , secondUser(uy){}
 
-    ~Chat() {};
+    ~Chat() = default;
 
 
-    const User &getFirstUser() const{return firstUser;}
+    const User &getFirstUser() const{
+        return firstUser;}
 
-    void setFirstUser(const User &firstUser){ Chat::firstUser = firstUser;}
+    void setFirstUser(const User &firstUser){
+        Chat::firstUser = firstUser;}
 
-    const User &getSecondUser() const {return secondUser;}
+    const User &getSecondUser() const {
+        return secondUser;}
 
-    void setSecondUser (const User &secondUser) { Chat::secondUser = secondUser;}
+    void setSecondUser (const User &secondUser) {
+        Chat::secondUser = secondUser;}
 
-    virtual void subscribe(std::shared_ptr<Observer> observer){ observers.push_back(observer);}
+    virtual void subscribe(std::shared_ptr<Observer> observer){
+        observers.push_back(observer);}
 
-    virtual void unsubscribe(std::shared_ptr<Observer> observer){ observers.remove(observer);}
+    virtual void unsubscribe(std::shared_ptr<Observer> observer){
+        observers.remove(observer);}
 
-    virtual void notify(){for(auto observer:observers)observer->update();}
+    virtual void notify(){
+        for(auto observer:observers)observer->update();}
 
     void newMessage(const Message & newMsg){
         if(firstUser.getName()==newMsg.getMsgFrom() || firstUser.getName()==newMsg.getMsgTo()||

@@ -12,7 +12,7 @@
 class Subjcet{
 
 public:
-    virtual ~Subjcet(){}
+    virtual ~Subjcet() = default;
 
     virtual void subscribe(std::shared_ptr<Observer> observer) = 0;
 
