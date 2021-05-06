@@ -23,6 +23,7 @@ test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../test/lib/googletest/googletes
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../test/lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../Chat.h
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../Message.h
+test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../MessageNotify.h
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../Observer.h
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../Subject.h
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../User.h
@@ -48,12 +49,7 @@ test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../test/lib/googletest/googlet
 test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../test/lib/googletest/googletest/include/gtest/internal/gtest-port.h
 test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../test/lib/googletest/googletest/include/gtest/internal/gtest-string.h
 test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../test/lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../Chat.h
 test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../Message.h
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../MessageNotify.h
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../Observer.h
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../Subject.h
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../User.h
 test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../test/MssageTest.cpp
 
 test/CMakeFiles/runAllTests.dir/UserTest.cpp.o: ../test/lib/googletest/googletest/include/gtest/gtest-death-test.h

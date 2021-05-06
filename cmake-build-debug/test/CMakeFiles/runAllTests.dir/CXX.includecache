@@ -342,15 +342,15 @@ Observer.h
 string
 /Users/francescocaselli1992/Documents/ChatLabPro/string
 
-/Users/francescocaselli1992/Documents/ChatLabPro/test/MssageTest.cpp
+/Users/francescocaselli1992/Documents/ChatLabPro/test/ChatTest.cpp
 gtest/gtest.h
 -
-../Message.h
-/Users/francescocaselli1992/Documents/ChatLabPro/Message.h
 ../Chat.h
 /Users/francescocaselli1992/Documents/ChatLabPro/Chat.h
-../MessageNotify.h
-/Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
 ../User.h
 /Users/francescocaselli1992/Documents/ChatLabPro/User.h
+../Message.h
+/Users/francescocaselli1992/Documents/ChatLabPro/Message.h
+../MessageNotify.h
+/Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
 

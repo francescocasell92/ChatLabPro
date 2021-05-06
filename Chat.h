@@ -60,14 +60,17 @@ public:
     }
     void readMessage(int i){
         if(i < messages.size() && i >= 0){
+            messages[i].setRead(true);
+            this->notify();
             if (messages[i].getMsgFrom()==firstUser.getName()||
             messages[i].getMsgTo()== secondUser.getName()){
                 std::cout <<firstUser.getName()+" : "+messages[i].getText()<< std::endl;
 
-                messages[i].setRead(true);
-                this->notify();
+
             }else
                 {std::cout <<secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
+
+
         }
         else
              std::cerr << "Messaggio fuori da una Chat." << std::endl;
@@ -76,7 +79,7 @@ public:
     int getUnreadMessages()const {
         int i=0;
         for(const auto &message:messages)
-            if(message.getMsgTo()==firstUser.getName())
+            if(message.getMsgTo()==firstUser.getName()||message.getMsgTo()==secondUser.getName())
                 if (!message.isRead())
                     i++;
                 return i;
