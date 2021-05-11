@@ -51,8 +51,8 @@ TEST(Chat, TestMethods){
 
     ASSERT_EQ(bar.getUnreadMessages(),6);
 
-    bar.readMessage(0);
-    bar.readMessage(1);
+     ASSERT_NO_THROW(bar.readMessage(0));
+    ASSERT_NO_THROW(bar.readMessage(1));
 
     ASSERT_EQ(bar.getUnreadMessages(),4);
 

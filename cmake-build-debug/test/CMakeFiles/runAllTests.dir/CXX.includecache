@@ -347,10 +347,6 @@ gtest/gtest.h
 -
 ../Chat.h
 /Users/francescocaselli1992/Documents/ChatLabPro/Chat.h
-../User.h
-/Users/francescocaselli1992/Documents/ChatLabPro/User.h
-../Message.h
-/Users/francescocaselli1992/Documents/ChatLabPro/Message.h
 ../MessageNotify.h
 /Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
 
