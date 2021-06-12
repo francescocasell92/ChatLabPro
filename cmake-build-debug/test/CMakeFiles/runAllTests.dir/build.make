@@ -103,18 +103,18 @@ test/CMakeFiles/runAllTests.dir/UserTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runAllTests.dir/UserTest.cpp.s"
 	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/francescocaselli1992/Documents/ChatLabPro/test/UserTest.cpp -o CMakeFiles/runAllTests.dir/UserTest.cpp.s
 
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: test/CMakeFiles/runAllTests.dir/flags.make
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o: ../test/MssageTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o"
-	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllTests.dir/MssageTest.cpp.o -c /Users/francescocaselli1992/Documents/ChatLabPro/test/MssageTest.cpp
+test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o: test/CMakeFiles/runAllTests.dir/flags.make
+test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o: ../test/MessageTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o"
+	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllTests.dir/MessageTest.cpp.o -c /Users/francescocaselli1992/Documents/ChatLabPro/test/MessageTest.cpp
 
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runAllTests.dir/MssageTest.cpp.i"
-	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/francescocaselli1992/Documents/ChatLabPro/test/MssageTest.cpp > CMakeFiles/runAllTests.dir/MssageTest.cpp.i
+test/CMakeFiles/runAllTests.dir/MessageTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runAllTests.dir/MessageTest.cpp.i"
+	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/francescocaselli1992/Documents/ChatLabPro/test/MessageTest.cpp > CMakeFiles/runAllTests.dir/MessageTest.cpp.i
 
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runAllTests.dir/MssageTest.cpp.s"
-	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/francescocaselli1992/Documents/ChatLabPro/test/MssageTest.cpp -o CMakeFiles/runAllTests.dir/MssageTest.cpp.s
+test/CMakeFiles/runAllTests.dir/MessageTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runAllTests.dir/MessageTest.cpp.s"
+	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/francescocaselli1992/Documents/ChatLabPro/test/MessageTest.cpp -o CMakeFiles/runAllTests.dir/MessageTest.cpp.s
 
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: test/CMakeFiles/runAllTests.dir/flags.make
 test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o: ../test/ChatTest.cpp
@@ -133,7 +133,7 @@ test/CMakeFiles/runAllTests.dir/ChatTest.cpp.s: cmake_force
 runAllTests_OBJECTS = \
 "CMakeFiles/runAllTests.dir/runAllTests.cpp.o" \
 "CMakeFiles/runAllTests.dir/UserTest.cpp.o" \
-"CMakeFiles/runAllTests.dir/MssageTest.cpp.o" \
+"CMakeFiles/runAllTests.dir/MessageTest.cpp.o" \
 "CMakeFiles/runAllTests.dir/ChatTest.cpp.o"
 
 # External object files for target runAllTests
@@ -141,7 +141,7 @@ runAllTests_EXTERNAL_OBJECTS =
 
 test/runAllTests: test/CMakeFiles/runAllTests.dir/runAllTests.cpp.o
 test/runAllTests: test/CMakeFiles/runAllTests.dir/UserTest.cpp.o
-test/runAllTests: test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o
+test/runAllTests: test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o
 test/runAllTests: test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o
 test/runAllTests: test/CMakeFiles/runAllTests.dir/build.make
 test/runAllTests: lib/libgtestd.a

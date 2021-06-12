@@ -21,10 +21,10 @@ int main() {
 
 
     //--MESSAGES--//
-    Message a("Tom","Jerry","Ciao Jerry come è andata ieri?");
-    Message b("Jerry","Tom","Ciao Tom, è andato tutto bene te?.");
-    Message c("Tom","Jerry","Tutto bene anche io.");
-    Message d("Bugs","Duffy","Che succede amico??");
+    Message a(tom,jerry,"Ciao Jerry come è andata ieri?");
+    Message b(jerry,tom,"Ciao Tom, è andato tutto bene te?.");
+    Message c(tom,jerry,"Tutto bene anche io.");
+    Message d(bugs,duffy,"Che succede amico??");
 
     //--CHAT--//
     Chat foo(tom,jerry);
@@ -36,23 +36,32 @@ int main() {
     MessageNotify notifier((fooptr), true);
     notifier.attach();
 
+
+
     //--EXE--//
     foo.newMessage(a);
     foo.newMessage(b);
     foo.newMessage(c);
-    foo.readMessage(0);
-    foo.readMessage(1);
-    foo.readMessage(2);
-
+    cout<<foo.readMessage(0)<<endl;
+    cout<<foo.readMessage(1)<<endl;
+    cout<<foo.readMessage(2)<<endl;
     //--ERROR--//
 
     try {
         foo.newMessage(d);
     }
     catch (invalid_argument &e){
+
         cerr << "Error: " << e.what() << endl;
     }
-        foo.readMessage(3);
+     try {
+
+         cout<<foo.readMessage(3)<<endl;
+
+         }
+     catch (invalid_argument &e){
+         cerr<< "Error: " << e.what() << endl;
+     }
 
 
 

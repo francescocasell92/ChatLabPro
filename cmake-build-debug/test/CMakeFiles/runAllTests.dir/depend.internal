@@ -29,7 +29,7 @@ test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o
  /Users/francescocaselli1992/Documents/ChatLabPro/Subject.h
  /Users/francescocaselli1992/Documents/ChatLabPro/User.h
  /Users/francescocaselli1992/Documents/ChatLabPro/test/ChatTest.cpp
-test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o
+test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o
  ../test/lib/googletest/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/googletest/include/gtest/gtest-matchers.h
  ../test/lib/googletest/googletest/include/gtest/gtest-message.h
@@ -51,7 +51,8 @@ test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o
  ../test/lib/googletest/googletest/include/gtest/internal/gtest-string.h
  ../test/lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
  /Users/francescocaselli1992/Documents/ChatLabPro/Message.h
- /Users/francescocaselli1992/Documents/ChatLabPro/test/MssageTest.cpp
+ /Users/francescocaselli1992/Documents/ChatLabPro/User.h
+ /Users/francescocaselli1992/Documents/ChatLabPro/test/MessageTest.cpp
 test/CMakeFiles/runAllTests.dir/UserTest.cpp.o
  ../test/lib/googletest/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/googletest/include/gtest/gtest-matchers.h

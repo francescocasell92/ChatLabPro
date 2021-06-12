@@ -315,10 +315,14 @@ vector
 /Users/francescocaselli1992/Documents/ChatLabPro/vector
 iostream
 /Users/francescocaselli1992/Documents/ChatLabPro/iostream
+string
+/Users/francescocaselli1992/Documents/ChatLabPro/string
 
 /Users/francescocaselli1992/Documents/ChatLabPro/Message.h
 string
 /Users/francescocaselli1992/Documents/ChatLabPro/string
+User.h
+/Users/francescocaselli1992/Documents/ChatLabPro/User.h
 
 /Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
 Observer.h
@@ -349,4 +353,6 @@ gtest/gtest.h
 /Users/francescocaselli1992/Documents/ChatLabPro/Chat.h
 ../MessageNotify.h
 /Users/francescocaselli1992/Documents/ChatLabPro/MessageNotify.h
+../User.h
+/Users/francescocaselli1992/Documents/ChatLabPro/User.h
 

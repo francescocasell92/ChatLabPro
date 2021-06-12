@@ -218,32 +218,32 @@ ChatTest.cpp.s:
 	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/ChatTest.cpp.s
 .PHONY : ChatTest.cpp.s
 
-MssageTest.o: MssageTest.cpp.o
+MessageTest.o: MessageTest.cpp.o
 
-.PHONY : MssageTest.o
+.PHONY : MessageTest.o
 
 # target to build an object file
-MssageTest.cpp.o:
-	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o
-.PHONY : MssageTest.cpp.o
+MessageTest.cpp.o:
+	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o
+.PHONY : MessageTest.cpp.o
 
-MssageTest.i: MssageTest.cpp.i
+MessageTest.i: MessageTest.cpp.i
 
-.PHONY : MssageTest.i
+.PHONY : MessageTest.i
 
 # target to preprocess a source file
-MssageTest.cpp.i:
-	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/MssageTest.cpp.i
-.PHONY : MssageTest.cpp.i
+MessageTest.cpp.i:
+	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/MessageTest.cpp.i
+.PHONY : MessageTest.cpp.i
 
-MssageTest.s: MssageTest.cpp.s
+MessageTest.s: MessageTest.cpp.s
 
-.PHONY : MssageTest.s
+.PHONY : MessageTest.s
 
 # target to generate assembly for a file
-MssageTest.cpp.s:
-	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/MssageTest.cpp.s
-.PHONY : MssageTest.cpp.s
+MessageTest.cpp.s:
+	cd /Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/MessageTest.cpp.s
+.PHONY : MessageTest.cpp.s
 
 UserTest.o: UserTest.cpp.o
 
@@ -315,9 +315,9 @@ help:
 	@echo "... ChatTest.o"
 	@echo "... ChatTest.i"
 	@echo "... ChatTest.s"
-	@echo "... MssageTest.o"
-	@echo "... MssageTest.i"
-	@echo "... MssageTest.s"
+	@echo "... MessageTest.o"
+	@echo "... MessageTest.i"
+	@echo "... MessageTest.s"
 	@echo "... UserTest.o"
 	@echo "... UserTest.i"
 	@echo "... UserTest.s"

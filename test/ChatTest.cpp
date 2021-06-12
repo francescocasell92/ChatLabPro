@@ -5,6 +5,7 @@
 #include <gtest/gtest.h>
 #include "../Chat.h"
 #include "../MessageNotify.h"
+#include "../User.h"
 
 User tom("tom","1234","Firenze");
 User jerry("jerry","5678","Roma");
@@ -13,12 +14,12 @@ Chat bar(tom,jerry);
 
 
 
-Message mx = Message("tom", "jerry", "Hello world.");
-Message ms = Message("jerry","tom","good moorning.");
-Message mn = Message("tom","jerry","Have a nice day.");
-Message mm = Message("jerry","tom","good evening.");
-Message mp = Message("tom","jerry","Say hello.");
-Message mi = Message("jerry","tom","your are welcome.");
+Message mx = Message(tom, jerry, "Hello world.");
+Message ms = Message(jerry,tom,"good moorning.");
+Message mn = Message(tom,jerry,"Have a nice day.");
+Message mm = Message(jerry,tom,"good evening.");
+Message mp = Message(tom,jerry,"Say hello.");
+Message mi = Message(jerry,tom,"your are welcome.");
 
 
 shared_ptr<Chat>barptr = make_shared<Chat>(bar);
@@ -49,11 +50,11 @@ TEST(Chat, TestMethods){
     bar.newMessage(mp);
     bar.newMessage(mi);
 
-    ASSERT_EQ(bar.getUnreadMessages(),6);
+    ASSERT_EQ(bar.getCountUnreadMessages(),6);
 
-     ASSERT_NO_THROW(bar.readMessage(0));
-    ASSERT_NO_THROW(bar.readMessage(1));
+   ASSERT_EQ( bar.readMessage(0),"tom : Hello world.");
+   ASSERT_EQ(bar.readMessage(1),"jerry : good moorning.");
 
-    ASSERT_EQ(bar.getUnreadMessages(),4);
+    ASSERT_EQ(bar.getCountUnreadMessages(),4);
 
 }

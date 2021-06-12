@@ -9,48 +9,52 @@
 #include "Chat.h"
 #include "memory"
 
-class MessageNotify: public Observer{
+class MessageNotify : public Observer {
 
 public:
 
-      //--METHODS---//
-      MessageNotify(std::shared_ptr<Chat> sub, bool act): subject(sub), active(act){}
+    //--METHODS---//
+    MessageNotify(std::shared_ptr<Chat> sub, bool act) : subject(sub), active(act) {}
 
-      virtual ~MessageNotify() = default;
+    virtual ~MessageNotify() = default;
 
-      virtual void attach() override{
-          std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
-          subject->subscribe(mhs);
-      }
+    virtual void attach() override {
+        std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
+        subject->subscribe(mhs);
+    }
 
-      virtual void detach() override {
-          std::shared_ptr<MessageNotify> mhs= std::make_shared<MessageNotify>(*this);
-          subject->unsubscribe(mhs);
-      }
+    virtual void detach() override {
+        std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
+        subject->unsubscribe(mhs);
+    }
 
-      virtual void update() override{
-          if(active)
-              this->draw(subject->getUnreadMessages());
-      }
+    virtual void update() override {
+        if (active)
+            this->draw(subject->getCountUnreadMessages());
+    }
 
-      void turnOn(){
-          active = true;}
+    void turnOn() {
+        active = true;
+    }
 
-      void turnOff(){
-          active = false;}
+    void turnOff() {
+        active = false;
+    }
 
-      void draw(int i){
-          std::cout <<  i+ "messaggi non letti ." << std::endl;}
+    void draw(int i) {
+        std::cout << i + "messaggi non letti ." << std::endl;
+    }
 
-      std::shared_ptr<Chat> getSubject(){
-          return subject;}
+    std::shared_ptr<Chat> getSubject() {
+        return subject;
+    }
 
 
 private:
 
-      //--ATTRIBUTES--//
-      std::shared_ptr<Chat> subject;
-      bool active;
+    //--ATTRIBUTES--//
+    std::shared_ptr<Chat> subject;
+    bool active;
 };
 
 

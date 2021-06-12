@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/francescocaselli1992/Documents/ChatLabPro/test/ChatTest.cpp" "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/runAllTests.dir/ChatTest.cpp.o"
-  "/Users/francescocaselli1992/Documents/ChatLabPro/test/MssageTest.cpp" "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/runAllTests.dir/MssageTest.cpp.o"
+  "/Users/francescocaselli1992/Documents/ChatLabPro/test/MessageTest.cpp" "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/runAllTests.dir/MessageTest.cpp.o"
   "/Users/francescocaselli1992/Documents/ChatLabPro/test/UserTest.cpp" "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/runAllTests.dir/UserTest.cpp.o"
   "/Users/francescocaselli1992/Documents/ChatLabPro/test/runAllTests.cpp" "/Users/francescocaselli1992/Documents/ChatLabPro/cmake-build-debug/test/CMakeFiles/runAllTests.dir/runAllTests.cpp.o"
   )

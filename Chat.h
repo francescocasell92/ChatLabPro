@@ -14,6 +14,7 @@
 #include "memory"
 #include "vector"
 #include "iostream"
+#include "string"
 
 
 class Chat {
@@ -22,79 +23,83 @@ class Chat {
 public:
 
     //--METHODS--//
-    Chat(User &ux , User &uy ): firstUser(ux) , secondUser(uy){}
+    Chat(User &ux, User &uy) : firstUser(ux), secondUser(uy) {}
 
     ~Chat() = default;
 
 
-    const User &getFirstUser() const{
-        return firstUser;}
+    const User &getFirstUser() const {
+        return firstUser;
+    }
 
-    void setFirstUser(const User &firstUser){
-        Chat::firstUser = firstUser;}
+    void setFirstUser(const User &firstUser) {
+        Chat::firstUser = firstUser;
+    }
 
     const User &getSecondUser() const {
-        return secondUser;}
+        return secondUser;
+    }
 
-    void setSecondUser (const User &secondUser) {
-        Chat::secondUser = secondUser;}
+    void setSecondUser(const User &secondUser) {
+        Chat::secondUser = secondUser;
+    }
 
-    virtual void subscribe(std::shared_ptr<Observer> observer){
-        observers.push_back(observer);}
+    virtual void subscribe(std::shared_ptr<Observer> observer) {
+        observers.push_back(observer);
+    }
 
-    virtual void unsubscribe(std::shared_ptr<Observer> observer){
-        observers.remove(observer);}
+    virtual void unsubscribe(std::shared_ptr<Observer> observer) {
+        observers.remove(observer);
+    }
 
-    virtual void notify(){
-        for(auto observer:observers)observer->update();}
+    virtual void notify() {
+        for (auto observer:observers)
+            observer->update();
+    }
 
-    void newMessage(const Message & newMsg){
-        if(firstUser.getName()==newMsg.getMsgFrom() || firstUser.getName()==newMsg.getMsgTo()||
-        secondUser.getName()==newMsg.getMsgFrom()||secondUser.getName()==newMsg.getMsgTo()){
-            messages.push_back(newMsg);
-            if(firstUser.getName()==newMsg.getMsgFrom())
+    void newMessage(const Message &addMsg) {
+        if (   firstUser.getName() == addMsg.getMsgFrom().getName() ||
+               firstUser.getName() == addMsg.getMsgTo().getName() ||
+              secondUser.getName() == addMsg.getMsgFrom().getName() ||
+              secondUser.getName() == addMsg.getMsgTo().getName()) {
+              messages.push_back(addMsg);
+            if (firstUser.getName() == addMsg.getMsgFrom().getName())
                 this->notify();
-        }
-        else
+        } else
             throw std::invalid_argument("La Chat tra questi utenti non esiste.");
     }
-    void readMessage(int i){
-        if(i < messages.size() && i >= 0){
+
+    string readMessage(int i ) {
+        if (i < messages.size() && i >= 0) {
             messages[i].setRead(true);
             this->notify();
-            if (messages[i].getMsgFrom()==firstUser.getName()||
-            messages[i].getMsgTo()== secondUser.getName()){
-                std::cout <<firstUser.getName()+" : "+messages[i].getText()<< std::endl;
-
-
-            }else
-                {std::cout <<secondUser.getName()+" : "+messages[i].getText()<<std::endl;}
-
-
-        }
-        else
-             std::cerr << "Messaggio fuori da una Chat." << std::endl;
+            if (messages[i].getMsgFrom().getName() == firstUser.getName() ||
+                messages[i].getMsgTo().getName() == secondUser.getName()) {
+                 return  firstUser.getName()+" : "+ messages[i].getText();
+            } else {
+                return secondUser.getName() +" : "+ messages[i].getText();
+            }
+        } else
+            throw std::invalid_argument("Messaggio fuori da una Chat.") ;
     }
 
-    int getUnreadMessages()const {
-        int i=0;
-        for(const auto &message:messages)
-            if(message.getMsgTo()==firstUser.getName()||message.getMsgTo()==secondUser.getName())
-                if (!message.isRead())
-                    i++;
-                return i;
+    int getCountUnreadMessages() const {
+        int i = 0;
+        for (const auto &message:messages)
+            if (!message.isRead())
+                i++;
+        return i;
     }
+
 private:
 
     //--ATTRIBUTES--//
-    User   firstUser , secondUser ;
-    std::list<std::shared_ptr<Observer>>observers;
+    User firstUser, secondUser;
+    std::list<std::shared_ptr<Observer>> observers;
     std::vector<Message> messages;
 
 
-
 };
-
 
 
 #endif //USER_H_CHAT_H

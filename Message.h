@@ -6,35 +6,42 @@
 #define CHATLABPRO_MESSAGE_H
 
 #include "string"
+#include "User.h"
 
 using namespace std;
 
-class Message{
+class Message {
 
 public:
     //--METHODS---//
-    Message(std::string msgFrom , std::string msgTo , std::string text, bool read = false ):
-    msgFrom(msgFrom),msgTo(msgTo) , text(text) , read(read) {}
+    Message(User &msgFrom, User &msgTo, std::string text, bool read = false) :
+            firstUser(msgFrom), secondUser(msgTo), text(text), read(read) {}
 
-    const std::string &getMsgFrom() const{
-        return msgFrom;}
+    const User &getMsgFrom() const {
+        return firstUser;
+    }
 
-    const std::string &getMsgTo() const{
-        return msgTo;}
+    const User &getMsgTo() const {
+        return secondUser;
+    }
 
-    const std::string &getText() const{
-        return text;}
+    const std::string &getText() const {
+        return text;
+    }
 
-    bool isRead () const {
-        return read;}
+    bool isRead() const {
+        return read;
+    }
 
-    bool setRead(bool read){
-        Message::read=read;}
+    bool setRead(bool read) {
+        Message::read = read;
+    }
 
 private:
     //--ATTRIBUTES--//
-std::string msgFrom , msgTo , text;
-bool read;
+    User firstUser , secondUser ;
+    std::string text;
+    bool read;
 
 };
 
