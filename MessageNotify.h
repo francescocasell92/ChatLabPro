@@ -2,60 +2,52 @@
 // Created by francesco caselli
 //
 
-#ifndef USER_H_MESSAGENOTIFY_H
-#define USER_H_MESSAGENOTIFY_H
+#ifndef CHAT_H_MESSAGENOTIFY_H
+#define CHAT_H_MESSAGENOTIFY_H
+
+
 
 #include "Observer.h"
 #include "Chat.h"
-#include "memory"
+#include <memory>
 
-class MessageNotify : public Observer {
-
+class MessageNotify: public Observer {
 public:
+    MessageNotify(bool act, std::shared_ptr<Chat> sub) : active(act), subject(sub){}
 
-    //--METHODS---//
-    MessageNotify(std::shared_ptr<Chat> sub, bool act) : subject(sub), active(act) {}
+    virtual ~MessageNotify(){}
 
-    virtual ~MessageNotify() = default;
-
-    virtual void attach() override {
-        std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
-        subject->subscribe(mhs);
+    virtual void attach() override{
+        std::shared_ptr<MessageNotify> ths = std::make_shared<MessageNotify>(*this);
+        subject->subscribe(ths);
     }
-
-    virtual void detach() override {
-        std::shared_ptr<MessageNotify> mhs = std::make_shared<MessageNotify>(*this);
-        subject->unsubscribe(mhs);
+    virtual void detach() override{
+        std::shared_ptr<MessageNotify> ths = std::make_shared<MessageNotify>(*this);
+        subject->unsubscribe(ths);
     }
-
-    virtual void update() override {
+    virtual void update() override{
         if (active)
-            this->draw(subject->getCountUnreadMessages());
+            this->draw(subject->getUnredMessages());
     }
-
-    void turnOn() {
+    void activate(){
         active = true;
     }
-
-    void turnOff() {
+    void turnOff(){
         active = false;
     }
-
-    void draw(int i) {
-        std::cout << i + "messaggi non letti ." << std::endl;
+    void draw(int m){
+        std::cout << "Hai " << m <<" messaggi non letti" << std::endl;
+        std::cout << "ultimo messaggio da parte di " << subject->lastMessage().getFrom() << ": " << subject->lastMessage().getText() << "." << std::endl;
     }
 
-    std::shared_ptr<Chat> getSubject() {
+
+    std::shared_ptr<Chat> getSubject(){
         return subject;
     }
-
-
 private:
-
-    //--ATTRIBUTES--//
-    std::shared_ptr<Chat> subject;
     bool active;
+    std::shared_ptr<Chat> subject;
 };
 
 
-#endif //USER_H_MESSAGENOTIFY_H
+#endif //CHAT_H_MESSAGENOTIFY_H

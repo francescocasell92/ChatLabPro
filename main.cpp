@@ -1,70 +1,60 @@
-//
-// Created by francesco caselli
-//
-
-
 #include <iostream>
-#include <memory>
 #include "User.h"
-#include "MessageNotify.h"
+#include "Message.h"
+#include "string"
 #include "Chat.h"
-
+#include "MessageNotify.h"
 using namespace std;
+
 
 int main() {
 
-    //--USER--//
-    User tom("Tom","1234","Firenze");
-    User jerry("Jerry","5678","Roma");
-    User bugs("Bugs","9123","Milano");
-    User duffy("Duffy","4567","Torino");
+    //---Users----------------------//
+
+    User tom("tom","1234");
+    User jerry("jerry","5678");
+    User bugs("bugs","2345");
+
+    //---Messages------------------//
+
+    Message p("tom","jerry","ciao come va?");
+    Message a("jerry","tom","tutto bene,te?.");
+    Message b("tom","jerry","bene grazie.");
+    Message c("bugs","duffy","che succede amico?");
 
 
-    //--MESSAGES--//
-    Message a(tom,jerry,"Ciao Jerry come è andata ieri?");
-    Message b(jerry,tom,"Ciao Tom, è andato tutto bene te?.");
-    Message c(tom,jerry,"Tutto bene anche io.");
-    Message d(bugs,duffy,"Che succede amico??");
+    //---newChat-------------------//
 
-    //--CHAT--//
     Chat foo(tom,jerry);
 
-    //--SMART_POINTER--//
-    shared_ptr<Chat> fooptr = make_shared<Chat>(foo);
+    //---SmartPointerChat----------//
 
-    //--NOTIFIER--//
-    MessageNotify notifier((fooptr), true);
+    shared_ptr<Chat> fptr = make_shared<Chat>(foo);
+
+    //---Notifier------------------//
+
+    MessageNotify notifier(true,(fptr));
     notifier.attach();
 
+    //---example-------------------//
 
-
-    //--EXE--//
+    foo.newMessage(p);
     foo.newMessage(a);
     foo.newMessage(b);
-    foo.newMessage(c);
-    cout<<foo.readMessage(0)<<endl;
-    cout<<foo.readMessage(1)<<endl;
-    cout<<foo.readMessage(2)<<endl;
-    //--ERROR--//
+    foo.readMessage(0);
+    foo.readMessage(1);
+    foo.readMessage(2);
 
-    try {
-        foo.newMessage(d);
+    //---error--------------------//
+
+    try{
+        foo.newMessage(c);
     }
     catch (invalid_argument &e){
-
-        cerr << "Error: " << e.what() << endl;
+        cerr << "Error: " << e.what() <<endl;
     }
-     try {
-
-         cout<<foo.readMessage(3)<<endl;
-
-         }
-     catch (invalid_argument &e){
-         cerr<< "Error: " << e.what() << endl;
-     }
-
-
-
-
     return 0;
+
+
+
 }

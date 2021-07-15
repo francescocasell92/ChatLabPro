@@ -2,22 +2,17 @@
 // Created by francesco caselli
 //
 
-#ifndef CHATLABPRO_SUBJECT_H
-#define CHATLABPRO_SUBJECT_H
-
-
-#include "memory"
+#ifndef PROGETTOCHATLAB_SUBJECT_H
+#define PROGETTOCHATLAB_SUBJECT_H
+#include <memory>
 #include "Observer.h"
 
-class Subjcet{
-
+class Subject {
 public:
-    virtual ~Subjcet() = default;
-
+    virtual ~Subject(){}
     virtual void subscribe(std::shared_ptr<Observer> observer) = 0;
-
     virtual void unsubscribe(std::shared_ptr<Observer> observer) = 0;
-
     virtual void notify() = 0;
 };
-#endif //CHATLABPRO_SUBJECT_H
+
+#endif //PROGETTOCHATLAB_SUBJECT_H

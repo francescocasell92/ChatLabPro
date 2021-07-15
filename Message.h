@@ -2,27 +2,29 @@
 // Created by francesco caselli
 //
 
-#ifndef CHATLABPRO_MESSAGE_H
-#define CHATLABPRO_MESSAGE_H
+#ifndef PROGETTOCHATLAB_MESSAGE_H
+#define PROGETTOCHATLAB_MESSAGE_H
 
-#include "string"
-#include "User.h"
+
+#include <string>
 
 using namespace std;
 
 class Message {
 
-public:
-    //--METHODS---//
-    Message(User &msgFrom, User &msgTo, std::string text, bool read = false) :
-            firstUser(msgFrom), secondUser(msgTo), text(text), read(read) {}
 
-    const User &getMsgFrom() const {
-        return firstUser;
+public:
+
+    Message(std::string from, std::string to, std::string text, bool read = false):
+    from(from), to(to) , text(text), read(read) {}
+
+
+    const std::string &getFrom() const {
+        return from;
     }
 
-    const User &getMsgTo() const {
-        return secondUser;
+    const std::string &getTo() const {
+        return to;
     }
 
     const std::string &getText() const {
@@ -33,16 +35,24 @@ public:
         return read;
     }
 
-    bool setRead(bool read) {
+    void setRead(bool read) {
         Message::read = read;
-    }
 
-private:
-    //--ATTRIBUTES--//
-    User firstUser , secondUser ;
-    std::string text;
-    bool read;
+    }
+        bool operator==(const Message &right) const {
+            return this->getTo() == right.getTo() && this->getFrom() == right.getFrom() &&
+                   this->getText() == right.getText() && this->isRead() == right.isRead();
+        }
+
+        private:
+
+        std::string from, to, text;
+
+        bool read;
+
+
 
 };
 
-#endif //CHATLABPRO_MESSAGE_H
+
+#endif //PROGETTOCHATLAB_MESSAGE_H

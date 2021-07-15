@@ -2,104 +2,104 @@
 // Created by francesco caselli
 //
 
-
-#ifndef USER_H_CHAT_H
-#define USER_H_CHAT_H
+#ifndef PROGETTOCHATLAB_CHAT_H
+#define PROGETTOCHATLAB_CHAT_H
 
 
 #include "User.h"
 #include "Message.h"
 #include "Subject.h"
-#include "list"
-#include "memory"
-#include "vector"
 #include "iostream"
-#include "string"
+#include "memory"
+#include "list"
+#include "vector"
 
+using namespace std;
 
 class Chat {
 
-
 public:
+    Chat(User &u1, User &u2) : myUser(u1), otherUser(u2) {}
 
-    //--METHODS--//
-    Chat(User &ux, User &uy) : firstUser(ux), secondUser(uy) {}
-
-    ~Chat() = default;
+    ~Chat() {};
 
 
-    const User &getFirstUser() const {
-        return firstUser;
+    const User &getMyUser() const {
+        return myUser;
     }
 
-    void setFirstUser(const User &firstUser) {
-        Chat::firstUser = firstUser;
+    void setMyUser(const User &myUser) {
+        Chat::myUser = myUser;
     }
 
-    const User &getSecondUser() const {
-        return secondUser;
+    const User &getOtherUser() const {
+        return otherUser;
     }
 
-    void setSecondUser(const User &secondUser) {
-        Chat::secondUser = secondUser;
+    void setOtherUser(const User &otherUser) {
+        Chat::otherUser = otherUser;
     }
 
+    void newMessage(const Message& newMsg) {
+        if (myUser.getName() == newMsg.getFrom() || myUser.getName() == newMsg.getTo()||
+            otherUser.getName() == newMsg.getTo() ||
+            otherUser.getName() == newMsg.getFrom()) {
+            messages.push_back(newMsg);
+            if (myUser.getName() == newMsg.getFrom())
+                this->notify();
+        } else
+            throw std::invalid_argument("invalid argument");
+
+    }
+
+
+    void readMessage(int i) {
+
+        if (i >= 0 && i < messages.size()) {
+            if (messages[i].getFrom() == myUser.getName() || messages[i].getTo() == otherUser.getName()) {
+                std::cout << myUser.getName() + ":" << std::endl;
+                std::cout << messages[i].getText() << std::endl;
+                messages[i].setRead(true);
+                this->notify();
+            } else {
+                std::cout << otherUser.getName()+ ":" << std::endl;
+                std::cout << messages[i].getText() << std::endl;
+            }
+        }
+        else
+            throw std::out_of_range("out of range");
+    }
+
+
+    int getUnredMessages() const {
+        int i = 0;
+        for (const auto &message:messages)
+            if (message.getTo() == myUser.getNumber())
+                if (!message.isRead())
+                    i++;
+        return i;
+
+    }
+    const Message& lastMessage() const{
+        return messages.back();
+    }
     virtual void subscribe(std::shared_ptr<Observer> observer) {
         observers.push_back(observer);
     }
-
     virtual void unsubscribe(std::shared_ptr<Observer> observer) {
         observers.remove(observer);
     }
-
     virtual void notify() {
         for (auto observer:observers)
             observer->update();
     }
 
-    void newMessage(const Message &addMsg) {
-        if (   firstUser.getName() == addMsg.getMsgFrom().getName() ||
-               firstUser.getName() == addMsg.getMsgTo().getName() ||
-              secondUser.getName() == addMsg.getMsgFrom().getName() ||
-              secondUser.getName() == addMsg.getMsgTo().getName()) {
-              messages.push_back(addMsg);
-            if (firstUser.getName() == addMsg.getMsgFrom().getName())
-                this->notify();
-        } else
-            throw std::invalid_argument("La Chat tra questi utenti non esiste.");
-    }
-
-    string readMessage(int i ) {
-        if (i < messages.size() && i >= 0) {
-            messages[i].setRead(true);
-            this->notify();
-            if (messages[i].getMsgFrom().getName() == firstUser.getName() ||
-                messages[i].getMsgTo().getName() == secondUser.getName()) {
-                 return  firstUser.getName()+" : "+ messages[i].getText();
-            } else {
-                return secondUser.getName() +" : "+ messages[i].getText();
-            }
-        } else
-            throw std::invalid_argument("Messaggio fuori da una Chat.") ;
-    }
-
-    int getCountUnreadMessages() const {
-        int i = 0;
-        for (const auto &message:messages)
-            if (!message.isRead())
-                i++;
-        return i;
-    }
-
 private:
 
-    //--ATTRIBUTES--//
-    User firstUser, secondUser;
-    std::list<std::shared_ptr<Observer>> observers;
+    User myUser , otherUser;
+    std::list<std::shared_ptr<Observer>>observers;
     std::vector<Message> messages;
-
-
 };
 
 
-#endif //USER_H_CHAT_H
+#endif //PROGETTOCHATLAB_CHAT_H
